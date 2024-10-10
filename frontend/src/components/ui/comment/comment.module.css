@@ -1,0 +1,49 @@
+.comment {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 24px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); */
+}
+
+.ownerData {
+  display: flex;
+  gap: 14px;
+}
+
+.avatar {
+  inline-size: 40px;
+}
+
+.ownerInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.userName {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.cityBlock {
+  display: flex;
+  gap: 2px;
+}
+
+.mapPin {
+  block-size: 16px;
+}
+
+.city {
+  font-size: 12px;
+}
+
+.date {
+  display: flex;
+  color: #7F7F7F;
+  font-size: 12px;
+  line-height: 18px;
+}
