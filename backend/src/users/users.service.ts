@@ -21,7 +21,7 @@ export class UsersService {
   async create(createUserDTO: CreateUserDTO) {
     const { username, email, password } = createUserDTO;
 
-    const isUserExist = this.userRepository.findOne({
+    const isUserExist = await this.userRepository.findOne({
       where: [{ username }, { email }],
     });
 

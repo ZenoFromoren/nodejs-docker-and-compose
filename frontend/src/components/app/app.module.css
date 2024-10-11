@@ -1,9 +1,9 @@
-body {
-  background-color: #F2F1F1;
+.content {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 40px;
 }
 
-.app {
-  display: flex;
-  flex-direction: column;
+.search {
+  margin-top: 42px;
 }
-

@@ -1,0 +1,52 @@
+services:
+  backend:
+    container_name: kpd-backend
+    build:
+      context: backend
+      dockerfile: Dockerfile
+    image: kpd-backend-docker
+    restart: always
+    env_file: 
+      - .env
+    ports:
+      - 4000:3000
+    networks:
+      - internal
+
+  frontend:
+    container_name: kpd-frontend
+    build:
+      context: frontend
+      dockerfile: Dockerfile
+    image: kpd-frontend-docker
+    restart: always
+    ports:
+      - 8081:80
+    networks:
+      - external
+
+  postgres:
+    container_name: postgres
+    image: postgres:alpine
+    env_file: .env
+    restart: always
+    networks:
+      - internal
+    volumes:
+      - database:/data/database
+
+  adminer:
+    container_name: adminer
+    image: adminer
+    restart: always
+    ports:
+      - 8082:8080
+    networks:
+      - internal
+
+volumes:
+  database:
+
+networks:
+  internal:
+  external:

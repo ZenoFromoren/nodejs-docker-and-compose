@@ -1,29 +1,37 @@
-.modal {
+.content {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 32px;
-  border-radius: 10px;
-  background-color: #fff;
-  z-index: 1;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); */
+  padding: 40px;
+  background-color: var(--background);
+  z-index: 2;
+  border-radius: var(--button-border-radius);
+  box-sizing: border-box;
 }
 
 .overlay {
-  content: '';
   position: fixed;
-  background-color: #00000025;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(229, 229, 229, 0.5);
 }
 
-.header {
-  display: flex;
-  gap: 143px;
-  margin-block-end: 32px;
-  white-space: nowrap;
-}
-
-.closeButton {
+.close_btn {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  border: none;
+  outline: none;
+  background: none;
+  transition: var(--common-transition);
   cursor: pointer;
+  z-index: 2;
+}
+
+.close_btn:hover {
+  opacity: .7;
 }
