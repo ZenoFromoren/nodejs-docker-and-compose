@@ -1,6 +1,6 @@
 module.exports = {
   apps : [{
-    name   : "kpd-backend",
+    name   : "kpd-backend-docker",
     script : "dist/main.js"
   }]
 }
